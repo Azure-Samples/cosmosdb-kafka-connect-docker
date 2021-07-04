@@ -1,0 +1,15 @@
+{
+    "name": "datagen-orders",
+    "config": {
+        "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+        "kafka.topic": "orders_avro_topic",
+        "quickstart": "orders",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "io.confluent.connect.avro.AvroConverter",
+        "value.converter.schemas.enable": "true",
+        "max.interval": 10000,
+        "iterations": 10000000,
+        "tasks.max": "1",
+        "value.converter.schema.registry.url": "http://schema-registry:8081"
+    }
+}

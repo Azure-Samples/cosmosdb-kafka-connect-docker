@@ -1,57 +1,17 @@
-# Project Name
+# Getting started with Kafka Connector for Azure Cosmos DB using Docker
 
-(short, 1-3 sentenced, description of the project)
+Having a local development environment is quite handy when trying out a new service or technology. [Docker](https://docs.docker.com/) has emerged as the de-facto choice in such cases. It is specially useful in scenarios where you're trying to integrate multiple services and gives you the ability to to start fresh before each run. 
 
-## Features
+This blog post is meant to provide a getting started guide for the Kafka Connector for Azure Cosmos DB. All the components (including Azure Cosmos DB) will run on your local machine, thanks to: 
 
-This project framework provides the following features:
+- The [Azure Cosmos DB Linux Emulator](https://docs.microsoft.com/azure/cosmos-db/linux-emulator?tabs=ssl-netstd21&WT.mc_id=data-30458-abhishgu) which can be used for local development and testing purposes without creating an Azure subscription or incurring any costs.
+- And, [Docker Compose](https://docs.docker.com/compose/) which is a tool for defining and running multi-container Docker applications. It will orchestrate all the components required by our setup including Azure Cosmos DB emulator, Kafka, Zookeeper, Kafka connectors etc.
 
-* Feature 1
-* Feature 2
-* ...
+![](images/diagram.jpg)
 
-## Getting Started
+To make things easier, we will pick single-focused scenarios and go step by step:
 
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+- Step 0 - A simple scenario to check if our setup if functional.
+- How to handle streaming JSON data
+- How to handle streaming JSON data which is *not* compatible with Azure Cosmos DB
+- How to handle Avro data using Schema Registry
