@@ -1,5 +1,7 @@
 # Getting started with Kafka Connector for Azure Cosmos DB using Docker
 
+*For a more thorough setup walkthough, take a look at our [blog article](https://devblogs.microsoft.com/cosmosdb/kafka-azure-cosmos-db-docker/).*
+
 Having a local development environment is quite handy when trying out a new service or technology. [Docker](https://docs.docker.com/) has emerged as the de-facto choice in such cases. It is specially useful in scenarios where you're trying to integrate multiple services and gives you the ability to to start fresh before each run.
 
 This blog post is meant to provide a getting started guide for the Kafka Connector for [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction?WT.mc_id=data-30458-abhishgu). All the components (including Azure Cosmos DB) will run on your local machine, thanks to: 
